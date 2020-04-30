@@ -15,15 +15,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @AutoConfigureMockMvc
 public class PingIntegrationTest {
-	
-	@Autowired
-	private MockMvc mvc;
-		
-	@Test
-	public void testHelloWorldEndpoint() throws Exception {
+
+  @Autowired
+  private MockMvc mvc;
+
+  @Test
+  public void testHelloWorldEndpoint() throws Exception {
     String response = mvc
-				.perform(get("/api/ping"))
-				.andReturn().getResponse().getContentAsString();
-    	assertEquals("pong", response);
-	}
+        .perform(get("/api/ping"))
+        .andReturn().getResponse().getContentAsString();
+    assertEquals("pong", response);
+  }
 }
